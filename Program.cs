@@ -124,31 +124,31 @@ class Program
 
     static void Task5()
     {
-        Console.Write("Enter the length of the rectangle: ");
+        Console.Write("Введіть довжину прямокутника: ");
         double length = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Enter the width of the rectangle: ");
+        Console.Write("Введіть ширину прямокутника: ");
         double width = Convert.ToDouble(Console.ReadLine());
         double area = length * width;
-        Console.WriteLine($"The area of the rectangle is {area}");
+        Console.WriteLine($"Площа трикутника - {area}");
     }
 
     static void Task6()
     {
-        Console.Write("Enter a number: ");
+        Console.Write("Введіть число: ");
         int number = int.Parse(Console.ReadLine());
         if (number % 2 == 0)
         {
-            Console.WriteLine("The number is even.");
+            Console.WriteLine("Число є парним.");
         }
         else
         {
-            Console.WriteLine("The number is odd.");
+            Console.WriteLine("Чмсло є не парне.");
         }
     }
 
     static void Task3()
     {
-        Console.Write("Enter the time (0-24): ");
+        Console.Write("ВВедіть годину (0-24): ");
         int time = int.Parse(Console.ReadLine());
         string greeting = "";
 
@@ -185,7 +185,7 @@ class Program
         int[] numbers = new int[3];
         for (int i = 0; i < 3; i++)
         {
-            Console.WriteLine($"Enter your {i + 1} number - ");
+            Console.WriteLine($"Введіть ваше {i + 1} число - ");
             string input = Console.ReadLine();
             if (int.TryParse(input, out int num))
             {
@@ -206,8 +206,8 @@ class Program
                 max = numbers[i];
             }
         }
-        Console.WriteLine($"Minimum: {min}");
-        Console.WriteLine($"Maximum: {max}");
+        Console.WriteLine($"Мінімум: {min}");
+        Console.WriteLine($"Максимум: {max}");
     }
     static void Task7()
     {
