@@ -7,7 +7,7 @@ class Program
         bool exit = false;
         while (!exit) 
         {
-            Console.Clear();
+            
             Console.WriteLine("Виберіть завдання:");
             Console.WriteLine("1. Завдання номер 1");
             Console.WriteLine("2. Завдання номер 2");
@@ -17,8 +17,9 @@ class Program
             Console.WriteLine("6. Завдання номер 6");
             Console.WriteLine("7. Завдання номер 7");
             Console.WriteLine("8. Завдання номер 8");
-            Console.WriteLine("Номер завдання: ");
+            Console.Write("Номер завдання: ");
             string input = Console.ReadLine();
+            Console.Clear();
             if (input.ToLower()== "n")
             {
                 exit=true;
@@ -58,16 +59,7 @@ class Program
                         Console.WriteLine("Невірне завдання.");
                         break;
                 }
-            Console.WriteLine("Натисніть любу клавішу для продовження або 'n' для виходу...");
-            var key = Console.ReadKey().Key;
-            if (key == ConsoleKey.N)
-            {
-                exit = true;
-            }
-            else
-            {
-                Console.WriteLine("Помилка при вводі літер.");
-            }
+            
         }
        
     }
@@ -124,31 +116,31 @@ class Program
 
     static void Task5()
     {
-        Console.Write("Enter the length of the rectangle: ");
+        Console.Write("Довжина трикутника: ");
         double length = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Enter the width of the rectangle: ");
+        Console.Write("Ширина трикутника: ");
         double width = Convert.ToDouble(Console.ReadLine());
         double area = length * width;
-        Console.WriteLine($"The area of the rectangle is {area}");
+        Console.WriteLine($"Площа - {area}");
     }
 
     static void Task6()
     {
-        Console.Write("Enter a number: ");
+        Console.Write("Введіть число: ");
         int number = int.Parse(Console.ReadLine());
         if (number % 2 == 0)
         {
-            Console.WriteLine("The number is even.");
+            Console.WriteLine("парне число");
         }
         else
         {
-            Console.WriteLine("The number is odd.");
+            Console.WriteLine("непарне число");
         }
     }
 
     static void Task3()
     {
-        Console.Write("Enter the time (0-24): ");
+        Console.Write("Введіть число (0-24): ");
         int time = int.Parse(Console.ReadLine());
         string greeting = "";
 
@@ -185,7 +177,7 @@ class Program
         int[] numbers = new int[3];
         for (int i = 0; i < 3; i++)
         {
-            Console.WriteLine($"Enter your {i + 1} number - ");
+            Console.WriteLine($"Введіть {i + 1} число - ");
             string input = Console.ReadLine();
             if (int.TryParse(input, out int num))
             {
@@ -206,8 +198,8 @@ class Program
                 max = numbers[i];
             }
         }
-        Console.WriteLine($"Minimum: {min}");
-        Console.WriteLine($"Maximum: {max}");
+        Console.WriteLine($"Мінімум: {min}");
+        Console.WriteLine($"Максимум: {max}");
     }
     static void Task7()
     {
